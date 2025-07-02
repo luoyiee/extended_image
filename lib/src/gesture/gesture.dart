@@ -356,7 +356,8 @@ class ExtendedImageGestureState extends State<ExtendedImageGesture>
         updateGesture = true;
       }
       final double delta = (details.focalPoint - _startingOffset).distance;
-      if (delta.greaterThan(minGesturePageDelta) && updateGesture) {
+      if (delta.greaterThan(minGesturePageDelta) && updateGesture &&
+          (_gestureDetails!.totalScale ?? 1.0).equalTo(1.0)) {
         extendedImageSlidePageState!.slide(
           details.focalPointDelta,
           extendedImageGestureState: this,

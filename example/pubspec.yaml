@@ -9,7 +9,7 @@ environment:
 dependencies:
   extended_sliver: any
   ff_annotation_route_library: any
-  fl_chart: any
+  fl_chart: ^0.69.2
   flutter:
     sdk: flutter
   flutter_ruler_picker: any
